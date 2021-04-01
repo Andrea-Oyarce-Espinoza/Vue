@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso Checkbox</title>
+</head>
+<body>
+    <div id="app">
+        <label><input type="checkbox" v-model="lenguajes" value="VueJS">VueJS</label><br>
+        <label><input type="checkbox" v-model="lenguajes" value="Angular">Angular</label><br>
+        <label><input type="checkbox" v-model="lenguajes" value="React">React</label><br>
+        <label><input type="checkbox" v-model="lenguajes" value="Bootstrap">Bootstrap</label><br>
+        <label><input type="checkbox" v-model="lenguajes" value="Laravel">Laravel</label><br>
+        <ul>
+            <li v-for="lenguaje of lenguajes">{{lenguaje}}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

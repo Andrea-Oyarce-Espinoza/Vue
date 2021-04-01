@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad 1</title>
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+
+<body>
+   <div id="app">
+        <div>    
+            <form @submit.prevent="ingresarTexto">
+                <label> Nombre: </label>
+                <input type="text" autocomplete="off" v-model="texto"><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div :class="clase">
+            {{mensaje}}
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

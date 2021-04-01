@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <h2>Ingresar nueva patente</h2>
+            <form @submit.prevent="agrePatentes">
+                <label class="etiqueta">Marca: </label>
+                <input type="text" placeholder="Ingrese marca" autocomplete="off" class="campo" v-model="edMarca"><br>
+                <label class="etiqueta">Modelo: </label>
+                <input type="text" placeholder="Ingrese modelo" autocomplete="off" class="campo" v-model="edModelo"><br>
+                <label class="etiqueta">Descripción: </label>
+                <textarea type="text" placeholder="Ingrese descripción" autocapitalize="off" class="campo" v-model="edDescripcion"></textarea><br>
+                <label class="etiqueta">Precio: </label>
+                <input type="number" placeholder="Ingrese precio" autocomplete="off" class="campo" v-model="edPrecio"><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div><br>
+        <div :class="clMensaje">
+            <div>{{mensaje}}</div>
+            <template v-if="!logroOperacion">
+                <ul>
+                    <li v-for="error of errores">
+                    {{error}}
+                    </li>
+                </ul>
+            </template>
+        </div>
+        <hr>
+        <div>
+            <h2>Lista de patentes</h2>
+            <template v-if="lisPatentes.length == 0">
+                <span>{{mensajeSinPatentes}}</span>
+            </template>
+            <template v-else>
+                <table>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                    <template v-for="patente of lisPatentes">
+                        <tr>
+                            <td>{{patente.marca}}      </td>
+                            <td>{{patente.modelo}}     </td>
+                            <td>{{patente.descripcion}}</td>
+                            <td>{{patente.precio}}     </td>
+                        </tr>
+                    </template>
+                </table>
+            </template>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

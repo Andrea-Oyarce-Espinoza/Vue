@@ -1,0 +1,29 @@
+.etiqueta {
+    display: inline-block;
+    width: 100px;
+}
+
+.campo {
+    width: 300px;
+}
+
+.ok {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 5px;
+    text-align: center;
+}

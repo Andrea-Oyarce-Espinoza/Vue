@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/style.css">
+    <title>Máscaras de Japón</title>
+</head>
+<body>
+  <!-- div inicialización framework -->
+<div id="app">
+  <template class="primero">
+    <!--v-model para crear binding bidireccionales en el elemento select-->
+    <!-- Busca automáticamente la manera correcta de actualizar el elemento según el tipo de entrada. -->
+    <select v-model="mascaras">
+      <!-- El atributo disabled es booleano, se ocupa para evitar que el usuario seleccione alguna opción antes de que se genere otra condición que es esencial. -->
+      <!-- value especifica el valor inicial del elemento. -->
+      <option disabled value="">Seleccione una máscara</option>
+      <!--La directiva v-for representa la lista de elementos basados en el arreglo imagenes, imagenes son la matriz de datos de origen e imagen es un alias para el elemento de matriz que se está iterando.  -->
+      <!-- el atributo v-bind enlaza por tanto el atributo al data y es sensible a sus cambios.  -->
+      <option v-for='imagen of imagenes' :value='imagen'>{{imagen.nombre}}</option>
+    </select>
+  </template><br><br>
+  <!-- v-if se usa para condicionar la renderización del bloque. El bloque solamente va a renderizar si la expresión de la directiva "return" regresa un valor verdadero.-->
+  <template v-if="selected">
+    <img :src="selected.imagen">
+    <p class="definicion">{{selected.definicion}}</p>
+    </template>
+</div>
+
+    <!-- enlace a VUEJS y JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

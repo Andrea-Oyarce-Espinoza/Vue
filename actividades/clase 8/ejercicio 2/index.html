@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SinglePicture</title>
+</head>
+<body>
+
+    <div id="app">
+        <form @submit.prevent="">
+            <input type="radio" v-model="simple" value="img_1" v-on:click="mostrar"><label for="img_1"><img src="img/alien2.jpg" class="img"></label>
+        </form>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <hr>
+        <p>Su preferencia es: {{imagen}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

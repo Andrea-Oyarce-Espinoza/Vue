@@ -1,0 +1,22 @@
+body {
+    /* Color de fondo */
+    background-color: rgb(224, 129, 129);
+    /* Tamaño de la fuente de toda la página. */
+    font-size: 30px;
+    /* Alineación de la fuente de toda la página. */
+    text-align: center;
+    /* Familia de la fuente de toda la página. */
+    font-family: 'New Tegomin', serif;
+    /* Margen superior para separar y ordenar los elementos. */
+    margin-top: 10px;
+}
+.definicion {
+    /* Margenes izquierdo y derecho de la descripción en pantalla completa */
+    margin-left: 300px;
+    margin-right: 300px;
+}
+img {
+    /* tamaño de las imágenes */
+    height: 400px;
+    width: 400px;
+}

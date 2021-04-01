@@ -1,0 +1,20 @@
+body {
+    background-image: url(../js/fondokawaii.png);
+}
+
+img {
+    /* tamaño de las imágenes */
+    height: 200px;
+    width: 200px;
+    /* orden de las imágenes en pantalla completa*/
+    margin-left: 70px;
+}
+
+.check {
+    /* tamaño de los checkbox */
+    width: 50px;
+    height: 50px;
+    /* orden los checkbox en pantalla completa */
+    margin: 30px;
+    margin-left: 150px;
+}
